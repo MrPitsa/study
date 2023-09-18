@@ -1,16 +1,14 @@
 package org.example;
 
 import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.ComponentScan;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Primary;
+import org.springframework.context.annotation.*;
 
 @Configuration
 @ComponentScan(basePackages = "org.example")
+@PropertySource("application.properties")
 public class Config {
 
-    /*@Bean("felix")
+    @Bean("felix")
     Cat felix() {
         Cat cat = new Cat();
         cat.setName("Felix");
@@ -24,13 +22,4 @@ public class Config {
         return cat;
     }
 
-    @Bean
-    String hello() {
-        return "Hello world";
-    }
-
-    @Bean
-    Integer five() {
-        return 5;
-    }*/
 }

@@ -1,13 +1,15 @@
 package org.example;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Component;
 
 @Component
 
 public class Cat {
-    private String name = "Felix";
+    @Value("${cat.name}")
+    private String name;
 
     Person person;
 
